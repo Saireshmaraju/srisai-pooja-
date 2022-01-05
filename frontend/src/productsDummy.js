@@ -1,6 +1,6 @@
 const products=[
     {
-        _id=1,
+        _id:1,
         name: 'Pudina Puvvu',
         image: '/images/pudina-puvvu.jpeg',
         description:'Menthal provides a cooling sensation hen applied to the skin or other tissues(such as the tongue,gums,or inside the cheks).Menthal topical oral mucous membrance(for use inside the mouth)is used to treat minor sore throat pain,or mouth irritatin caused by a canker sore',
@@ -12,7 +12,7 @@ const products=[
         numReviews:5,
     },
     {
-        _id=2,
+        _id:2,
         name: 'Bharatvasi Agarbatti',
         image: '/images/agarbatti.png',
         description:
@@ -25,7 +25,7 @@ const products=[
         numReviews: 8,
       },
       {
-          _id=3,
+          _id:3,
         name: 'Akanda Vattulu',
         image: '/images/akanda-vattulu.png',
         description:
@@ -38,7 +38,7 @@ const products=[
         numReviews: 12,
       },
       {
-          _id=4,
+          _id:4,
         name: 'Karpuram Oil',
         image: '/images/karpuram-oil.jpg',
         description:
@@ -51,7 +51,7 @@ const products=[
         numReviews: 12,
       },
       {
-          _id=5,
+          _id:5,
         name: 'Brass Diya',
         image: '/images/brass-diya.jpg',
         description:
@@ -64,7 +64,7 @@ const products=[
         numReviews: 10,
       },
       {
-          _id=6,
+          _id:6,
         name: 'Siddi Dhoop Cups',
         image: '/images/dhoop-cup.jpg',
         description:

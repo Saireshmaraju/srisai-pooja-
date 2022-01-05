@@ -27,12 +27,16 @@ import PropTypes from 'prop-types'
 
     )
 }
-Rating.defaultProps={
-    color:'red'
+Rating.defaultProps = {
+    color : '#f8e825'
 }
-//To eliminate warnings in console Rating.PropTypes={
-   // value: PropTypes.number.isRequired,
-    //text: PropTypes.string.isRequired,
-    //color:PropTypes.string
-//}
+
+//To eliminite warnings in console
+Rating.propTypes = {
+    value: PropTypes.number.isRequired,
+    text : PropTypes.string.isRequired,
+    color: PropTypes.string
+}
+
+
 export default Rating
