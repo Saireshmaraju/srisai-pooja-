@@ -13,20 +13,18 @@ dotenv.config()
 
 connectDB()
 
-
-const importData =  async() => {
+const importData = async () => {
     try {
-
         // clearing at first
         await Order.deleteMany()
         await Product.deleteMany()
         await User.deleteMany()
 
-        //Now insideString
+        // Now inserting
         const createdUsers = await User.insertMany(users)
         const adminUser = createdUsers[0]._id // first item is Admin
         const sampleProducts = products.map(product => {
-            return {...product, user: adminUser}
+            return { ...product, user: adminUser}
         })
 
         await Product.insertMany(sampleProducts)
@@ -34,16 +32,13 @@ const importData =  async() => {
         console.log('Data Imported!!'.green.inverse)
 
         process.exit()
-
-    } catch(error) {
-
+    } catch (error) {
         console.error(`${error}`.red.inverse)
-        process.exit(1)  // 1 represents failure
-
+        process.exit(1) // 1 represents failure
     }
 }
 
-const destroyData = async() => {
+const destroyData = async () => {
     try {
         await Order.deleteMany()
         await Product.deleteMany()
@@ -51,19 +46,14 @@ const destroyData = async() => {
 
         console.log('Data Destroyed!!'.red.inverse)
         process.exit()
-
-    }
-    catch(error) {
-
+    } catch(error) {
         console.error(`${error}`.red.inverse)
         process.exit(1)
-
     }
 }
 
 if(process.argv[2] === '-d') {
-
     destroyData()
-}else {
+} else {
     importData()
 }

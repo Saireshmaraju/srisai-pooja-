@@ -1,9 +1,11 @@
-h3{
+h3 {
   padding: 1rem 0;
 }
-main{
-  min-height:80vh;
+
+main {
+  min-height: 80vh;
 }
-.rating{
+
+.rating span {
   margin: 0.1rem;
 }
